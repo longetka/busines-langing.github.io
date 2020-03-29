@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text&display=swap');
+// variables
+/* fonts */
+$ubuntu-font: 'Ubuntu', sans-serif;
+$source-sans: 'Source Sans Pro', sans-serif;
+$libre-font: 'Libre Caslot Text', serif;
+/* colors */
+$blue: #0045a4;
+$brown: #cfaa8f;
+$gray: #878787;
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-rows: repeat(6, 1fr);
+    max-width: 1920px;
+    
+    .header{
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        .nav{
+            grid-column: 1/4;
+            display: grid;
+            grid-template-columns: 0.75fr 4fr 0.5fr 0.4fr;
+    
+            .nav-logo{
+                display: flex;
+                align-items: center;
+                .brown-circle{
+                    content: '';
+                    height: 40px;
+                    width: 40px;
+                    position: absolute;
+                    z-index: 2;
+                    background-color: #cfaa8f;
+                    border-radius: 50%;
+                }
+                .blue-circle{
+                    content: '';
+                    height: 40px;
+                    width: 40px;
+                    position: absolute;
+                    left: 30px;
+                    z-index: 1;
+                    background-color: $blue;
+                    border-radius: 50%;
+                }
+                &__title{
+                    font-family: $ubuntu-font;
+                    font-size: 14px;
+                    position: absolute;
+                    left: 90px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    top: 26px;
+                    color: $blue;
+                }
+            }
+            .nav-bar{
+                display: grid;
+                justify-items: end;
+                align-items: center;
+                
+                &__list{
+                    font-family: $source-sans;
+                    list-style-type: none;
+                    
+                    li{
+                        display: inline-block;
+                        padding-right: 40px;
+                    }
+    
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .nav-button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &__download{
+                    text-decoration: none;
+                    font-family: $source-sans;
+                    color: white;
+                    background-color: $blue;
+                    font-size: 14px;
+                    padding: 20px 30px;
+                    border-radius: 30px;
+                    white-space: nowrap;
+    
+                    &:hover{
+                        background: linear-gradient(-21deg, rgb(81,111,252) 24%, rgb(91,73,222) 100%);
+                    }
+                }
+                
+            }
+            .nav-button-login{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &__button{
+                    text-decoration: none;
+                    color: white;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+                &__icon:hover{
+                    content: '';
+                    height: 30px;
+                    width: 30px;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+        &__main{
+            
+            &__background{
+                position: absolute;
+                z-index: -10;
+                top: 0;
+                right: 0;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__title{
+                font-family: $libre-font;
+                font-size: 60px;
+                color: $blue;
+                margin-left: 165px;
+            }
+            &__subtitle{
+                font-family: $source-sans;
+                font-size: 30px;
+                color: $gray;
+                margin-left: 165px;
+            }
+            &__video-button{
+                font-family: $source-sans;
+                margin-left: 165px;
+                .video-button__icon{
+                    content: '';
+                    background-color: $brown;
+                    border-radius: 50%;
+                    width: 95px;
+                    height: 95px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .video-button__play{
+                        height: 0;
+                        width: 0;
+                        border-top: 20px solid transparent;
+                        border-bottom: 20px solid transparent;
+
+                        border-left: 30px solid white;
+                    }
+                }
+            }
+        }
+        }
+    }

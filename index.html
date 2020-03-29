@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Invest Academy</title>
 </head>
 <body>
     <div class="container">
-        <nav class="nav">
+        <header class="header">
+            <nav class="nav">
               <div class="nav-logo">
-                  <img src="" alt="company logo" class="nav-logo__image">   
+                 <div class="brown-circle"></div>
+                 <div class="blue-circle"></div>
+                 <div class="nav-logo__title">invest academy</div>
               </div>  
               <div class="nav-bar">
                   <ul class="nav-bar__list">
@@ -20,23 +23,32 @@
                       <li class="nav-bar__links"><a href="#">About us</a></li>                      
                   </ul>
               </div>
-              <a href="#" class="nav-button-download">FREE DOWNLOAD</a>
+              <div class="nav-button">
+                  <a href="#" class="nav-button__download">FREE DOWNLOAD</a>
+              </div>
               <div class="nav-button-login">
-                  <img src="" alt="login icon" class="nav-button-login__icon">
-                  <a href="#" class="nav-button-login__button"></a>
-                </div>
-        </nav>
-        <header class="header">
-            <h1 class="header__title">How to invest like a broker in 5 weeks</h1>
-            <p class="header__sutitle">Lorem ipsum dolor sit amet consectetur.</p>
-            <div class="header__video-button">
+                  <a href="#" class="nav-button-login__button">
+                      <img src="img/navigate/login.png" alt="login icon" class="nav-button-login__icon">Login
+                  </a>
+              </div>
+            </nav>
+        <main class="header__main">
+            <div class="header__main__background"><img src="img/header/head-bg-businesman.jpg" alt="" class="businesman-image"></div>
+            <h1 class="header__main__title">How to invest like a broker in 5 weeks</h1>
+            <p class="header__main__subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="header__main__video-button">
                 <a href="#" class="video-button__button">
-                    <img src="" alt="Play icon" class="video-button__icon">
+                    <div class="video-button__icon">
+                        <div class="video-button__play"></div>
+                    </div>
                 </a>
                 <p class="video-button__subtitle">Check our video</p>
                 <p class="video-button__title">How to works?</p>
             </div>
+        </main>
         </header>
     </div>
+
+    <script src="https://gist.github.com/DavidWells/18e73022e723037a50d6.js"></script>
 </body>
 </html>
